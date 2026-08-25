@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>28 Ağustos ❤️</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#160b18,#3b102b,#170914);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.container{
+  width:92%;
+  max-width:500px;
+  text-align:center;
+  padding:35px 22px;
+  animation:fade 1.5s ease;
+}
+
+.heart{
+  font-size:65px;
+  animation:pulse 1.5s infinite;
+}
+
+h1{
+  font-size:30px;
+  margin:15px 0;
+}
+
+p{
+  font-size:18px;
+  line-height:1.7;
+  color:#f4dce9;
+}
+
+button{
+  margin-top:25px;
+  border:0;
+  padding:15px 35px;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:bold;
+  color:white;
+  background:linear-gradient(90deg,#e91e63,#ff4081);
+  box-shadow:0 8px 25px rgba(255,50,120,.35);
+}
+
+.page{
+  display:none;
+}
+
+.page.active{
+  display:block;
+}
+
+.date{
+  font-size:24px;
+  color:#ff8ab5;
+  font-weight:bold;
+}
+
+.message{
+  margin-top:25px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;
+  padding:22px;
+}
+
+.small{
+  font-size:14px;
+  color:#cfaebe;
+  margin-top:30px;
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.15)}
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div id="page1" class="page active">
+    <div class="heart">❤️</div>
+    <h1>Sana küçük bir sürprizim var…</h1>
+    <p>Hazırsan aç bakalım. 🥹❤️</p>
+    <button onclick="nextPage()">Aç 💌</button>
+  </div>
+
+  <div id="page2" class="page">
+    <div class="heart">💖</div>
+    <div class="date">28 Ağustos 2025</div>
+    <h1>Her şeyin başladığı gün.</h1>
+
+    <div class="message">
+      <p>
+        Saat tam 00.00… Bugün bizim günümüz. ❤️
+        <br><br>
+        Aradan geçen zaman ne kadar olursa olsun,
+        seninle başlayan o güzel hikâyeyi hâlâ
+        ilk günkü gibi kalbimde taşıyorum.
+      </p>
+    </div>
+
+    <button onclick="nextPage()">Devam et ❤️</button>
+  </div>
+
+  <div id="page3" class="page">
+    <div class="heart">🥹❤️</div>
+    <h1>İyi ki varsın.</h1>
+
+    <div class="message">
+      <p>
+        İyi ki o gün yollarımız kesişmiş.
+        <br><br>
+        İyi ki hayatımda oldun.
+        <br><br>
+        Nice 28 Ağustoslara beraber…
+        ❤️
+      </p>
+    </div>
+
+    <p class="small">Seni seviyorum. ❤️</p>
+  </div>
+
+</div>
+
+<script>
+let page = 1;
+
+function nextPage(){
+  document.getElementById("page"+page).classList.remove("active");
+  page++;
+  document.getElementById("page"+page).classList.add("active");
+}
+</script>
+
+</body>
+</html>
