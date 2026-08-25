@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -6,9 +6,7 @@
 <title>28 Ağustos ❤️</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
@@ -19,15 +17,22 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
+  text-align:center;
 }
 
 .container{
   width:92%;
   max-width:500px;
-  text-align:center;
-  padding:35px 22px;
-  animation:fade 1.5s ease;
+  padding:30px 20px;
+}
+
+.page{
+  display:none;
+  animation:fade 1s ease;
+}
+
+.page.active{
+  display:block;
 }
 
 .heart{
@@ -36,63 +41,70 @@ body{
 }
 
 h1{
-  font-size:30px;
-  margin:15px 0;
+  font-size:29px;
+  margin:20px 0;
 }
 
 p{
   font-size:18px;
-  line-height:1.7;
-  color:#f4dce9;
+  line-height:1.8;
+  color:#f7dce8;
 }
 
 button{
   margin-top:25px;
   border:0;
-  padding:15px 35px;
+  padding:15px 38px;
   border-radius:30px;
   font-size:18px;
   font-weight:bold;
   color:white;
   background:linear-gradient(90deg,#e91e63,#ff4081);
-  box-shadow:0 8px 25px rgba(255,50,120,.35);
-}
-
-.page{
-  display:none;
-}
-
-.page.active{
-  display:block;
-}
-
-.date{
-  font-size:24px;
-  color:#ff8ab5;
-  font-weight:bold;
+  box-shadow:0 8px 25px rgba(255,50,120,.3);
 }
 
 .message{
   margin-top:25px;
+  padding:25px 20px;
+  border-radius:20px;
   background:rgba(255,255,255,.08);
   border:1px solid rgba(255,255,255,.15);
-  border-radius:20px;
-  padding:22px;
 }
 
-.small{
-  font-size:14px;
-  color:#cfaebe;
-  margin-top:30px;
+.date{
+  color:#ff8ab5;
+  font-size:24px;
+  font-weight:bold;
+}
+
+.future-message{
+  margin-top:18px;
+  padding:18px 20px;
+  border-radius:18px;
+  background:rgba(255,80,140,.12);
+  border:1px solid rgba(255,120,170,.25);
+}
+
+.future-message p{
+  margin:0;
+  font-size:17px;
+  color:#ffb5cf;
+  font-style:italic;
 }
 
 @keyframes pulse{
-  50%{transform:scale(1.15)}
+  50%{transform:scale(1.12)}
 }
 
 @keyframes fade{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 </style>
 </head>
@@ -101,60 +113,62 @@ button{
 
 <div class="container">
 
+  <!-- İLK EKRAN -->
   <div id="page1" class="page active">
     <div class="heart">❤️</div>
+
     <h1>Sana küçük bir sürprizim var…</h1>
-    <p>Hazırsan aç bakalım. 🥹❤️</p>
+
+    <p>Hazırsan aç bakalım. 🥹</p>
+
     <button onclick="nextPage()">Aç 💌</button>
   </div>
 
+
+  <!-- İKİNCİ EKRAN -->
   <div id="page2" class="page">
+
     <div class="heart">💖</div>
-    <div class="date">28 Ağustos 2025</div>
+
+    <div class="date">
+      28 Ağustos 2025
+    </div>
+
     <h1>Her şeyin başladığı gün.</h1>
 
+    <button onclick="nextPage()">Devam et ❤️</button>
+
+  </div>
+
+
+  <!-- MESAJ EKRANI -->
+  <div id="page3" class="page">
+
+    <div class="heart">🥹❤️</div>
+
     <div class="message">
+
       <p>
         Saat tam 00.00… Bugün bizim günümüz. ❤️
         <br><br>
-        Aradan geçen zaman ne kadar olursa olsun,
-        seninle başlayan o güzel hikâyeyi hâlâ
-        ilk günkü gibi kalbimde taşıyorum.
-      </p>
-    </div>
 
-    <button onclick="nextPage()">Devam et ❤️</button>
-  </div>
-
-  <div id="page3" class="page">
-    <div class="heart">🥹❤️</div>
-    <h1>İyi ki varsın.</h1>
-
-    <div class="message">
-      <p>
-        İyi ki o gün yollarımız kesişmiş.
+        İyi ki o gün seninle tanışmışım.
         <br><br>
-        İyi ki hayatımda oldun.
+
+        Şu an yanımda değilsin, keşke olsaydın…
+        Ama aramızdaki mesafe, sana karşı hissettiklerimi değiştirmiyor.
         <br><br>
-        Nice 28 Ağustoslara beraber…
-        ❤️
+
+        Birlikte geçirdiğimiz her an benim için çok değerli.
+        <br><br>
+
+        Umarım daha nice yıldönümlerimizi yan yana kutlarız.
+        <br><br>
+
+        İyi ki varsın, iyi ki hayatımdasın.
+        <br><br>
+
+        <strong>Seni çok seviyorum. ❤️</strong>
       </p>
-    </div>
 
-    <p class="small">Seni seviyorum. ❤️</p>
-  </div>
-
-</div>
-
-<script>
-let page = 1;
-
-function nextPage(){
-  document.getElementById("page"+page).classList.remove("active");
-  page++;
-  document.getElementById("page"+page).classList.add("active");
-}
-</script>
-
-</body>
-</html>
+    </
