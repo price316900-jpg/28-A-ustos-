@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -6,104 +6,99 @@
 <title>28 Ağustos ❤️</title>
 
 <style>
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  min-height:100vh;
-  font-family:Arial,sans-serif;
-  background:linear-gradient(135deg,#160b18,#3b102b,#170914);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+* {
+  box-sizing: border-box;
 }
 
-.container{
-  width:92%;
-  max-width:500px;
-  padding:30px 20px;
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #26091e;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-.page{
-  display:none;
-  animation:fade 1s ease;
+.container {
+  width: 92%;
+  max-width: 500px;
+  padding: 30px 20px;
 }
 
-.page.active{
-  display:block;
+.page {
+  display: none;
+  animation: fade 1s ease;
 }
 
-.heart{
-  font-size:65px;
-  animation:pulse 1.5s infinite;
+.page.active {
+  display: block;
 }
 
-h1{
-  font-size:29px;
-  margin:20px 0;
+.heart {
+  font-size: 90px;
+  animation: pulse 1.5s infinite;
 }
 
-p{
-  font-size:18px;
-  line-height:1.8;
-  color:#f7dce8;
+h1 {
+  font-size: 30px;
+  margin: 20px 0;
 }
 
-button{
-  margin-top:25px;
-  border:0;
-  padding:15px 38px;
-  border-radius:30px;
-  font-size:18px;
-  font-weight:bold;
-  color:white;
-  background:linear-gradient(90deg,#e91e63,#ff4081);
-  box-shadow:0 8px 25px rgba(255,50,120,.3);
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #f7dce8;
 }
 
-.message{
-  margin-top:25px;
-  padding:25px 20px;
-  border-radius:20px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.15);
+button {
+  margin-top: 25px;
+  border: 0;
+  padding: 15px 38px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #e91e63, #ff4081);
+  box-shadow: 0 8px 25px rgba(255,50,120,.35);
 }
 
-.date{
-  color:#ff8ab5;
-  font-size:24px;
-  font-weight:bold;
+.message {
+  margin-top: 25px;
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
 }
 
-.future-message{
-  margin-top:18px;
-  padding:18px 20px;
-  border-radius:18px;
-  background:rgba(255,80,140,.12);
-  border:1px solid rgba(255,120,170,.25);
+.date {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff8ab5;
 }
 
-.future-message p{
-  margin:0;
-  font-size:17px;
-  color:#ffb5cf;
-  font-style:italic;
+.small {
+  font-size: 15px;
+  color: #cfaebe;
+  margin-top: 30px;
 }
 
-@keyframes pulse{
-  50%{transform:scale(1.12)}
-}
-
-@keyframes fade{
-  from{
-    opacity:0;
-    transform:translateY(20px);
+@keyframes pulse {
+  50% {
+    transform: scale(1.12);
   }
-  to{
-    opacity:1;
-    transform:translateY(0);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
@@ -113,26 +108,23 @@ button{
 
 <div class="container">
 
-  <!-- İLK EKRAN -->
   <div id="page1" class="page active">
+  
     <div class="heart">❤️</div>
 
     <h1>Sana küçük bir sürprizim var…</h1>
 
-    <p>Hazırsan aç bakalım. 🥹</p>
+    <p>Hazırsan aç bakalım. 🥹❤️</p>
 
     <button onclick="nextPage()">Aç 💌</button>
   </div>
 
 
-  <!-- İKİNCİ EKRAN -->
   <div id="page2" class="page">
 
     <div class="heart">💖</div>
 
-    <div class="date">
-      28 Ağustos 2025
-    </div>
+    <div class="date">28 Ağustos 2025</div>
 
     <h1>Her şeyin başladığı gün.</h1>
 
@@ -141,15 +133,16 @@ button{
   </div>
 
 
-  <!-- MESAJ EKRANI -->
   <div id="page3" class="page">
 
     <div class="heart">🥹❤️</div>
 
+    <h1>İyi ki varsın.</h1>
+
     <div class="message">
 
       <p>
-        Saat tam 00.00… Bugün bizim günümüz. ❤️
+        Bugün bizim günümüz. ❤️
         <br><br>
 
         İyi ki o gün seninle tanışmışım.
@@ -162,7 +155,7 @@ button{
         Birlikte geçirdiğimiz her an benim için çok değerli.
         <br><br>
 
-        Umarım daha nice yıldönümlerimizi yan yana kutlarız.
+        Zamanı gelince her şeyi birlikte kutlayacağız.
         <br><br>
 
         İyi ki varsın, iyi ki hayatımdasın.
@@ -171,4 +164,21 @@ button{
         <strong>Seni çok seviyorum. ❤️</strong>
       </p>
 
-    </
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+let page = 1;
+
+function nextPage() {
+  document.getElementById("page" + page).classList.remove("active");
+  page++;
+  document.getElementById("page" + page).classList.add("active");
+}
+</script>
+
+</body>
+</html>
